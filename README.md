@@ -1,4 +1,4 @@
-Default-Site
+Refresh Hilo Members Repo Site
 ============
 
-Refresh Hilo default website
+http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html
