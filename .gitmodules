@@ -1,4 +1,4 @@
 [submodule "_site"]
 	path = _site
-	url = git@github.com:Refresh-Hilo/Default-Site.git
-	branch = gh-pages
+    url=git@github.com:Refresh-Hilo/Refresh-Hilo.github.io.git
+	branch = master
