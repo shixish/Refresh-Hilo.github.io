@@ -4,9 +4,11 @@ title: Events
 
 ---
 
-This is the page here.
-
-{% for event in site.events %}
-	{{ event.url }}
-	{{ event.title }}
+<ul class="list-unstyled">
+{% for event in site.events reversed %}
+	<li>
+		<h3>{{ event.title }}</h3>
+		<a href="{{ event.url }}" class="btn btn-default">Event Details</a>
+	</li>
 {% endfor %}
+</ul>

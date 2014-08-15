@@ -4,6 +4,7 @@ email: your-email@domain.com
 description: "Refresh Hilo is a collective of web professionals, developers and designers, working together to foster new ideas and refresh the creative, technical and professional aspects of their trade. All are welcome to contribute or learn."
 baseurl: ""
 url: "http://www.refresh-hilo.org"
+timezone: Pacific/Honolulu
 
 # Site assets & libraries
 jquery: 1.11.1
@@ -25,6 +26,6 @@ permalink: pretty
 
 # Misc site vars
 facebook: undefined
-meetup: undefined
-google+: undefined
+meetup: http://www.meetup.com/Refresh-Hilo
+google+: https://plus.google.com/100423298758135837509
 twitter: undefined

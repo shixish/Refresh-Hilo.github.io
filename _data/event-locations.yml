@@ -1,0 +1,15 @@
+- id: HTE
+  title: Hawaii Tech Exchange
+  address: '259 Haili St'
+  city: Hilo
+  state: Hawaii
+  zip: 96720
+  url: http://hitx.co
+  
+- id: HTW
+  title: Hawaii Tech Works
+  address: '47 Rainbow Drive'
+  city: Hilo
+  state: Hawaii
+  zip: 96720
+  url: http://www.hawaiitechworks.org
