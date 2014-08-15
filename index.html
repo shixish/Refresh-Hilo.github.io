@@ -1,8 +1,44 @@
 ---
 layout: default
+bodyClass: carousel
 ---
 
-<div class="home">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	{% comment %} The default-carousel.yml file can be found in the _data directory {% endcomment %}
+	<ol class="carousel-indicators">
+		{% for item in site.data.default-carousel %}
+			{% if forloop.first == true %}
+			<li data-target="#myCarousel" data-slide-to="{{ forloop.index0 }}" class="active"></li>
+			{% else %}
+			<li data-target="#myCarousel" data-slide-to="{{ forloop.index0 }}" class=""></li>
+			{% endif %}		
+		{% endfor %}
+	</ol>
+	<div class="carousel-inner">
+		{% for item in site.data.default-carousel %}
+			{% if forloop.first == true %}
+			<div class="item active">
+			{% else %}
+			<div class="item">
+			{% endif %}
+				<img src="{{ item.img }}">
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>{{ item.headline }}</h1>
+						<p>{{ item.content }}</p>
+						<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+
+
+<!-- <div class="home">
 
   <h1>Posts</h1>
 
@@ -17,4 +53,4 @@ layout: default
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</div>
+</div> -->

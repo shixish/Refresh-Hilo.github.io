@@ -1,10 +1,30 @@
 # Site settings
-title: Your awesome title
+title: Refresh Hilo
 email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+description: "Refresh Hilo is a collective of web professionals, developers and designers, working together to foster new ideas and refresh the creative, technical and professional aspects of their trade. All are welcome to contribute or learn."
 baseurl: ""
-url: "http://yourdomain.com"
+url: "http://www.refresh-hilo.org"
+
+# Site assets & libraries
+jquery: 1.11.1
+modernizr: 2.6.2
+bootstrap: 3.2.0
+
+# Collections
+collections:
+  events:
+    output: true
+    permalink: /event/:path/
+  members:
+    output: true
+    permalink: /members/:path/
 
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+# Misc site vars
+facebook: undefined
+meetup: undefined
+google+: undefined
+twitter: undefined

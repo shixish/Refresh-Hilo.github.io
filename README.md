@@ -21,4 +21,18 @@ Since we are using GIT, this part is easy. You may freely work in the *develop* 
 ##Going Live
 Since we are using a submodule to point to a subfolder of the develop branch, deployment is actually easier than it sounds. All you need to do to deploy your changes is to commit any changes to the *develop* branch or merge your changes and run the [jekyll -build command](http://jekyllrb.com/docs/usage/) from the local project. After jekyll has compiled the new files into the _site directory you can then commit the changes in the submodule (master branch) and push them to GitHub.
 
+##Liquid Template Notes
+
+###Variables
+To learn more about project vars [visit this page](http://jekyllrb.com/docs/variables/).
+####Site Variables
+Site vars are global to the project, some have default values while others values changes based on the current document. Global vars can also be added in the *_config.yml* file located in the root of the project.
+* site.jquery - set version for project jQuery JS library
+* site.modernizr - set version for project Modernizr JS library
+* site.bootstrap - set version for project Bootstrap JS library
+
+####Page Variables
+Page vars are local to the document and the inherited template files.
+* page.bodyClass - use to add a class name to the body tag of default layout for page level style controls
+
 This document is a work in progress - please help keep it updated
