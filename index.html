@@ -17,16 +17,16 @@ bodyClass: mediatop
 	<div class="carousel-inner">
 		{% for item in site.data.default-carousel %}
 			{% if forloop.first == true %}
-			<div class="item active">
+			<div class="item active" style="background-image:url('{{ item.img }}')">
 			{% else %}
-			<div class="item">
+			<div class="item" style="background-image:url('{{ item.img }}')">
 			{% endif %}
-				<img src="{{ item.img }}">
+				<!-- <img src="{{ item.img }}"> -->
 				<div class="container">
 					<div class="carousel-caption">
 						<h1>{{ item.headline }}</h1>
 						<p>{{ item.content }}</p>
-						<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+						<p><a class="btn btn-lg btn-primary" href="{{ item.url }}" role="button">{{ item.cta }}</a></p>
 					</div>
 				</div>
 			</div>

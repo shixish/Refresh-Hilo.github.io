@@ -3,35 +3,43 @@ layout: default
 ---
 <div class="event container">
 	<div class="row">
-		<div class="col-sm-8">
-			<h1 id="">{{ page.title }}</h1>
-			<a href="{{ site.meetup }}/events/{{ page.meetupid }}" data-event="{{ page.meetupid }}" class="mu-rsvp-btn">RSVP</a>
-			<hr />
-			{{ content }}
+		<div class="col-sm-8 {{ page.tags }}">
+			<header class="page-header">
+				<h1>{{ page.title }}</h1>
+				{% if page.meetupid %}
+				<a href="{{ site.meetup }}/events/{{ page.meetupid }}" data-event="{{ page.meetupid }}" class="mu-rsvp-btn">RSVP</a>
+				{% endif %}
+			</header>
+			<article>
+				{{ content }}
+			</article>
 		</div>
 		<div class="col-sm-4">
-			<h3><span class="glyphicon glyphicon-calendar"></span> Date &amp; Time</h3>
-			<div class="well">
-				<span class="h4">{{ page.date | date: "%B %-d, %Y" }}</span><br/>
-				<span>{{ page.date | date: "%A %l:%M %p %Z" }}</span>
-			</div>
-			<h3><span class="glyphicon glyphicon-map-marker"></span> Location</h3>
-			{% for location in site.data.event-locations %}
-				{% if location.id == page.location %}
-					<a class="btn btn-small btn-default pull-right" href="{{ location.url }}">Visit website</a>
-					<address>
-						<strong>{{ location.title }}</strong>
-						<br>
-						{{ location.address }}
-						<br>
-						{{ location.city }}, {{ location.state }} {{ location.zip }}
-						<br>
-						
-					</address>
-					<img class="img-responsive" src="http://placehold.it/350x350&text=Google+Map+Here" alt="" />
-				{% endif %}		
-			{% endfor %}
-			
+			<aside>
+				<section class="mod time">
+					<h3><span class="glyphicon glyphicon-calendar"></span> Date &amp; Time</h3>
+					<div class="well">
+						<span class="h4">{{ page.date | date: "%B %-d, %Y" }}</span><br/>
+						<span>{{ page.date | date: "%A %l:%M %p %Z" }}</span>
+					</div>
+				</section>
+				<section class="mod location">
+					<h3><span class="glyphicon glyphicon-map-marker"></span> Location</h3>
+					{% for location in site.data.event-locations %}
+						{% if location.id == page.location %}
+							<a class="btn btn-small btn-default pull-right" href="{{ location.url }}">Visit website</a>
+							<address>
+								<strong>{{ location.title }}</strong>
+								<br>
+								{{ location.address }}
+								<br>
+								{{ location.city }}, {{ location.state }} {{ location.zip }}
+							</address>
+							<img class="img-responsive" src="http://placehold.it/350x350&text=Google+Map+Here" alt="" />
+						{% endif %}		
+					{% endfor %}
+				</section>
+			</aside>
 		</div>
 	</div>
 </div>

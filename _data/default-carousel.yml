@@ -1,25 +1,12 @@
-- headline: This is the first slide here
-  cta: http://emeehan.com
-  content: Hello World!
-  img: http://placehold.it/1200x400
-    #position: center center
+- headline: 'Sept 09, 2014'
+  url: /event/09-09-2014-meetup/
+  cta: RSVP Today!
+  content: 'The next event is coming soon, join us!'
+  img: http://photos3.meetupstatic.com/photos/event/5/8/2/c/highres_371662572.jpeg
     
-- headline: This is the secound slide here
-  cta: http://emeehan.com
-  img: http://placehold.it/1200x400
-    #position: center center
+# - headline: This is the secound slide here
+  # rul: http://emeehan.com
+  # cta: RSVP Today!
+  # content: Hello World!
+  # img: http://placehold.it/1200x400
     
-- headline: This is the third slide here
-  cta: http://emeehan.com
-  img: http://placehold.it/1200x400
-    #position: center center
-    
-- headline: This is the forth slide here
-  cta: http://emeehan.com
-  img: http://placehold.it/1200x400
-    #position: center center
-    
-- headline: This is the fifth slide here
-  cta: http://emeehan.com
-  img: http://placehold.it/1200x400
-    #position: center center

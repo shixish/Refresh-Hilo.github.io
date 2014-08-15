@@ -1,14 +1,23 @@
 ---
 layout: page
 title: Events
-
 ---
-
-<ul class="list-unstyled">
-{% for event in site.events reversed %}
-	<li>
-		<h3>{{ event.title }}</h3>
-		<a href="{{ event.url }}" class="btn btn-default">Event Details</a>
-	</li>
-{% endfor %}
-</ul>
+<div class="row event-list">
+	{% for event in site.events reversed %}
+		<div class="col-sm-6 col-md-4" data-time="{{ event.date | date_to_long_string }}">
+			<div class="thumbnail">
+				<a href="{{ event.url }}"><img src="http://placehold.it/350x350&text=Event+Photo+Here" alt=""/></a>
+				<div class="caption">
+					<h3>{{ event.title }}</h3>
+					<p>
+						<span class="h5">{{ event.date | date: "%B %-d, %Y" }}</span><br/>
+						<span>{{ event.date | date: "%A %l:%M %p %Z" }}</span>
+					</p>
+					<p>
+						<a href="{{ event.url }}" class="btn btn-default">View Event Details</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>

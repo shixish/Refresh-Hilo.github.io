@@ -1,11 +1,11 @@
 ---
 layout: event
-title: 'Topic TBD'
-date: 2014-09-09 18:00:00 -10:00
+title: **EVENT TITLE**
+date: YYYY-MM-DD HH:MM:00 -10:00
 tags: meetup
 
-location: HTE
-meetupid: 200668052
+location: **LOCATION ID**
+meetupid: **MEETUP EVENT ID**
 ---
 
 Details coming soon!
@@ -20,10 +20,9 @@ Details coming soon!
 
 Presentation Links:
 
-* [Google+ Event Page](https://plus.google.com/u/0/events/cnv3fbhosc8v9aqqtt17bfh3poc)
+* [Google+ Event Page](https://plus.google.com/events/c010obkjukuroikk82dcgd7di88)
 
 
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="" frameborder="0" allowfullscreen></iframe>
 </div>
-
