@@ -5348,6 +5348,13 @@ body {
 .promote h2 {
   font-weight: normal; }
 
+/* EVENT PAGE
+-------------------------------------------------- */
+.mod.location > iframe {
+  border: none;
+  width: 100%;
+  height: 300px; }
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 @media (min-width: 768px) {
@@ -5375,4 +5382,9 @@ body {
     clear: none; }
 
   .event-list > div:nth-of-type(3n+4) {
-    clear: left; } }
+    clear: left; }
+
+  .mod.location > iframe {
+    border: none;
+    width: 100%;
+    height: 400px; } }
