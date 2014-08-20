@@ -35,7 +35,7 @@ layout: default
 								<br>
 								{{ location.city }}, {{ location.state }} {{ location.zip }}
 							</address>
-							<img class="img-responsive" src="http://placehold.it/350x350&text=Google+Map+Here" alt="" />
+							<iframe src="https://www.google.com/maps/embed/v1/place?q={{ location.address | append:' ' | append:location.city | append:' ' | append:location.state | append:' ' | append:location.zip | uri_escape }}&key={{ site.key_gmap }}"></iframe>
 						{% endif %}		
 					{% endfor %}
 				</section>

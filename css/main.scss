@@ -86,6 +86,15 @@ body {
   }
 }
 
+/* EVENT PAGE
+-------------------------------------------------- */
+.mod.location{
+  > iframe{
+    border:none;
+    width:100%;
+    height:300px;
+  }
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -123,6 +132,14 @@ body {
   }
   .event-list > div:nth-of-type(3n+4){
     clear:left;
+  }
+  
+  .mod.location{
+    > iframe{
+      border:none;
+      width:100%;
+      height:400px;
+    }
   }
   
 }
