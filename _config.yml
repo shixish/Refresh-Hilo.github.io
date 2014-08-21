@@ -25,10 +25,11 @@ markdown: kramdown
 permalink: pretty
 
 # Misc site vars
-facebook: undefined
+facebook: https://www.facebook.com/groups/refresh.hilo/
 meetup: http://www.meetup.com/Refresh-Hilo
-google+: https://plus.google.com/100423298758135837509
-twitter: undefined
+googleplus: https://plus.google.com/communities/107501944160515171773
+twitter: https://twitter.com/refreshhilo
+github: https://github.com/Refresh-Hilo
 
 # API Keys
 key_gmap: AIzaSyAQ1PDqxaPmEjnVir_77TmLsEC1IYB11Ew
