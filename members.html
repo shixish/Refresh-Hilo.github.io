@@ -4,4 +4,18 @@ title: Members
 
 ---
 
-This is the page here.
+<div class="row member-list">
+	{% for member in site.members %}
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail">
+				<a href="{{ member.url }}"><img src="{{ member.photo }}" alt=""/></a>
+				<div class="caption">
+					<h3>{{ member.title }}</h3>
+					<p>
+						<a href="{{ member.url }}" class="btn btn-default">View Profile</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>
