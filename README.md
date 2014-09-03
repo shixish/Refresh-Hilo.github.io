@@ -36,3 +36,11 @@ Page vars are local to the document and the inherited template files.
 * page.bodyClass - use to add a class name to the body tag of default layout for page level style controls
 
 This document is a work in progress - please help keep it updated
+
+##Resources
+
+* [Jekyll](http://jekyllrb.com/)
+* [Twitter Bootstrap](http://getbootstrap.com/)
+* [jQuery](http://jquery.com/)
+* [Modernizr](http://modernizr.com/)
+* [Mono Social Icons Font](http://drinchev.github.io/monosocialiconsfont/)
