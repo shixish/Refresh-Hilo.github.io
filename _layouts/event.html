@@ -9,6 +9,9 @@ layout: default
 				{% if page.meetupid %}
 				<a href="{{ site.meetup }}/events/{{ page.meetupid }}" data-event="{{ page.meetupid }}" class="mu-rsvp-btn">RSVP</a>
 				{% endif %}
+				{% if page.hangoutonair %}
+				<a class="btn btn-xs btn-primary" href="{{ page.hangoutonair }}"><span class="glyphicon glyphicon-facetime-video"></span> Hangout</a>
+				{% endif %}
 			</header>
 			<article>
 				{{ content }}
