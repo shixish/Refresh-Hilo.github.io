@@ -1,6 +1,6 @@
 Refresh Hilo
 ============
-Welcome to the [members site](http://www.refresh-hilo.org) repo, this repo is avalible to all members of Refreash-Hilo. Please modify with care, be respectful of your fellow members and **always remember to have fun, learn and share**. If you would like access send an email to Edward Meehan with your github username.
+Welcome to the [members site](http://www.refresh-hilo.org) repo, this repo is avalible to all members of Refresh-Hilo. Please modify with care, be respectful of your fellow members and **always remember to have fun, learn and share**. If you would like access send an email to Edward Meehan with your github username.
 
 ##Project Details
 This [site](http://www.refresh-hilo.org) is built with [Jekyll](http://jekyllrb.com/) and hosted with [GitHub Pages](https://pages.github.com/).
