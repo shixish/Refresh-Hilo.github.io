@@ -46,6 +46,21 @@ hr.divider{
   a{
     color:$gray-light;
     text-decoration:none;
+    &.facebook:hover{
+      color: #46629e;
+    }
+    &.meetup:hover{
+      color: #e0393e;
+    }
+    &.googleplus:hover{
+      color: #dd4b39;
+    }
+    &.twitter:hover{
+      color: #55acee;
+    }
+    &.github:hover{
+      color: #4183c4;
+    }
     &:hover{
       color:$gray;
     }
