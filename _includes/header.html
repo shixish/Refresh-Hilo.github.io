@@ -15,9 +15,23 @@
 					<ul class="nav navbar-nav">
 						{% for page in site.pages %}
 							{% if page.layout == 'page' %}
+								{% if page.title == 'Events' %}
+								<li>
+									<div class="btn-group navbar-btn">
+										<a class="btn" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+										<button href="#" class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+										<ul class="dropdown-menu" role="menu">
+											{% for event in site.events reversed %}
+												<li><a href="{{ event.url }}">{{ event.title }}</a></li>
+											{% endfor %}
+							          	</ul>
+									</div>
+								</li>
+								{% else %}
 								<li>
 									<a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
 								</li>
+								{% endif %}
 							{% endif %}
 						{% endfor %}
 					</ul>

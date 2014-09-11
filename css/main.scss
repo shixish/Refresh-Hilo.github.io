@@ -125,7 +125,7 @@ hr.divider{
 -------------------------------------------------- */
 
 .promote {
-  .col-lg-4 {
+  > .row > div {
     margin-bottom: 20px;
     text-align: center;
     p {
