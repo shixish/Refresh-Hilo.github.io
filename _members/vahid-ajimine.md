@@ -14,4 +14,5 @@ Placeholder until I have time to fully flesh this out.
 * Local Food Expert
 
 (@VahidAjimine)[https://twitter.com/VahidAjimine]
+
 (LinkedIn)[https://www.linkedin.com/pub/vahid-ajimine/70/a55/467]
