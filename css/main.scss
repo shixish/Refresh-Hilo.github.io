@@ -87,6 +87,37 @@ hr.divider{
     .container {
       width: auto;
     }
+    .btn-group{
+      display:block;
+      &:after, &:before{
+        content:" ";
+        display:table;
+      }
+      &:after{
+        clear:both;
+      }
+      &.open{
+        a.btn{
+          border-color:transparent;
+          background-color:transparent;
+        }
+      }
+      
+      button.dropdown-toggle{
+        background-color:transparent;
+        border-left: #101010 solid 1px;
+        box-shadow: -1px 0 0 rgba(#fff, 0.1);
+        .caret{
+          color: $gray-light;
+        }
+      }
+      a.btn {
+        color: $gray-light;
+        &:hover{
+          color:#fff;
+        }
+      }
+    }
   }
 }
 
@@ -159,6 +190,32 @@ hr.divider{
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
+@media (max-width: 767px) {
+  .navbar-wrapper{
+    .navbar{
+      .btn-group{
+        > .btn + .dropdown-toggle {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+        .dropdown-menu{
+          background-color: rgba(#000, 0.1);
+          margin-top:40px;
+          padding:0;
+          border-radius:0;
+          li:first-child{
+            border-top: solid 1px #101010;
+            box-shadow: inset 0 1px 0 rgba(#fff, 0.1);
+          }
+          li:last-child{
+            border-bottom: solid 1px #101010;
+            box-shadow: 0 1px 0 rgba(#fff, 0.1);
+          }
+        }
+      }
+    }
+  }
+}
 
 @media (min-width: 768px) {
 
@@ -173,6 +230,12 @@ hr.divider{
       padding-right: 0;
       padding-left: 0;
       border-radius: 4px;
+      .btn-group{
+        button.dropdown-toggle{
+          border-right: #101010 solid 1px;
+          box-shadow: inset -1px 0 0 rgba(#fff, 0.1), -1px 0 0 rgba(#fff, 0.1);
+        }
+      }
     }
   }
 
