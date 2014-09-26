@@ -13,3 +13,11 @@
   state: Hawaii
   zip: 96720
   url: http://www.hawaiitechworks.org
+  
+- id: HBJ
+  title: Hilo Burger Joint
+  address: '776 Kilauea Ave'
+  city: Hilo
+  state: Hawaii
+  zip: 96720
+  url: http://hiloburgerjoint.com
