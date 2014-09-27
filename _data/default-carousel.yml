@@ -1,9 +1,16 @@
+- headline: 'Happy Hour - Hilo Burger Joint'
+  url: /event/10-3-2014-happyhour/
+  cta: RSVP Today!
+  content: It’s our first of many happy hours, come join us Friday Oct. 3rd @ 4pm - 6pm.
+  img: /assets/img/carousel-hiloburgerjoint.jpg
+
 - headline: 'Oct 14, 2014'
   url: /event/10-14-2014-meetup/
   cta: RSVP Today!
   content: 'The next event is coming soon, join us!'
   img: http://photos3.meetupstatic.com/photos/event/5/8/2/c/highres_371662572.jpeg
-    
+
+  
 # - headline: 'Hilo Hackathon 4 Charity'
   # rul: http://emeehan.com
   # cta: RSVP Today!
