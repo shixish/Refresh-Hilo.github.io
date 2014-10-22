@@ -245,16 +245,16 @@ hr.divider{
     font-size: 21px;
     line-height: 1.4;
   }
-  .event-list > div:nth-of-type(2n+3){
+  .event-list > div:nth-of-type(2n+3),.member-list > div:nth-of-type(2n+3){
     clear:left;
   }
 }
 
 @media (min-width: 992px) {
-  .event-list > div:nth-of-type(2n+3){
+  .event-list > div:nth-of-type(2n+3),.member-list > div:nth-of-type(2n+3){
     clear:none;
   }
-  .event-list > div:nth-of-type(3n+4){
+  .event-list > div:nth-of-type(3n+4),.member-list > div:nth-of-type(3n+5){
     clear:left;
   }
   
