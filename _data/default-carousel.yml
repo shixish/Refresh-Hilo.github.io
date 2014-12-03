@@ -1,11 +1,11 @@
-- headline: 'Halloween Happy Hour - Hilo Burger Joint'
-  url: /event/10-31-2014-happyhour/
-  cta: RSVP Today!
-  content: Come join us Friday Oct. 31st @ 4pm - 6pm.
-  img: /assets/img/carousel-hiloburgerjoint.jpg
+# - headline: 'Halloween Happy Hour - Hilo Burger Joint'
+#   url: /event/10-31-2014-happyhour/
+#   cta: RSVP Today!
+#   content: Come join us Friday Oct. 31st @ 4pm - 6pm.
+#   img: /assets/img/carousel-hiloburgerjoint.jpg
 
-- headline: 'AngularJS Nov 11, 2014'
-  url: /event/11-11-2014-meetup/
+- headline: 'Comps into Pages - Dec 09, 2014'
+  url: /event/12-09-2014-meetup/
   cta: RSVP Today!
   content: 'The next event is coming soon, join us!'
   img: http://photos3.meetupstatic.com/photos/event/5/8/2/c/highres_371662572.jpeg
