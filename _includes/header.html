@@ -21,7 +21,7 @@
 										<a class="btn" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
 										<button href="#" class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
 										<ul class="dropdown-menu" role="menu">
-											{% for event in site.events reversed %}
+											{% for event in site.events reversed limit:5 offset:7 %}
 												<li><a href="{{ event.url }}">{{ event.title }}</a></li>
 											{% endfor %}
 							          	</ul>
@@ -34,6 +34,9 @@
 								{% endif %}
 							{% endif %}
 						{% endfor %}
+						<!-- <li>
+							<a href="{{ site.baseurl }}/hackathon">Hackathon</a>
+						</li> -->
 					</ul>
 				</div>
 			</div>

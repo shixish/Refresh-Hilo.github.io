@@ -4,16 +4,14 @@ title: Members
 
 ---
 
-<div class="row member-list">
+<div class="row list-wrapper">
 	{% for member in site.members %}
-		<div class="col-sm-6 col-md-3">
-			<div class="thumbnail">
-				<a href="{{ member.url }}"><img src="{{ member.photo }}" alt=""/></a>
-				<div class="caption">
-					<h3>{{ member.title }}</h3>
-					<p>
-						<a href="{{ member.url }}" class="btn btn-default">View Profile</a>
-					</p>
+		<div class="col-sm-6 col-md-3 list-item">
+			<div class="list-item-block">
+				<a href="{{ member.url }}"><img class="list-item-block-img" src="{{ member.photo }}" alt="{{ member.title }}"/></a>
+				<h3 class="list-item-block-hd">{{ member.title }}</h3>
+				<div class="list-item-block-bd">
+					<a href="{{ member.url }}" class="btn btn-default">View Profile</a>
 				</div>
 			</div>
 		</div>

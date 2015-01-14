@@ -4,7 +4,13 @@
 
 @import "bootstrap_custom";
 
-/* GLOBAL STYLES */
+/*
+ --------------------------------------------------
+ Web Fonts & Web Font Classes
+ --------------------------------------------------
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif|Oxygen:400,700,300);
 
 @font-face {
   $icon-font-name: 'MonoSocialIconsFont-1.10';
@@ -21,62 +27,58 @@
   font-style: normal;
 }
 
-body {
-  padding-bottom: 40px;
-  color: #5a5a5a;
-  .page-content{
+/*
+ --------------------------------------------------
+ General Element Styles
 
-  }
+ * Element Styles without classes
+ --------------------------------------------------
+*/
+body{
+  background-image: url('/assets/img/wood-repeat-texture.jpg');
 }
 
-hr.divider{
-  margin:60px 0;
+hr{
+  margin:$line-height-computed 0;
 }
 
-.socialicon{
-  font-family: 'Mono Social Icons Font';
-  font-size:3.5em;
+article{
+  text-shadow: 0 1px 1px rgba(black, .8);
 }
 
-.social-links{
-  list-style:none;
-  li{
-    display:inline-block;
-  }
-  a{
-    color:$gray-light;
-    text-decoration:none;
-    &.facebook:hover{
-      color: #46629e;
-    }
-    &.meetup:hover{
-      color: #e0393e;
-    }
-    &.googleplus:hover{
-      color: #dd4b39;
-    }
-    &.twitter:hover{
-      color: #55acee;
-    }
-    &.github:hover{
-      color: #4183c4;
-    }
-    &:hover{
-      color:$gray;
-    }
-  }
+a{
+  text-shadow: 0 1px 1px rgba(black, 1);
 }
-/* CUSTOMIZE THE NAVBAR
--------------------------------------------------- */
+
+/*
+ --------------------------------------------------
+ Footer - global footer element
+ --------------------------------------------------
+*/
+.site-footer{
+  font-size: $font-size-small;
+  padding: $line-height-computed 0;
+  margin-top: $line-height-computed;
+  text-shadow: 0 1px 0 rgba(black, .8);
+}
+
+/*
+ --------------------------------------------------
+ Navbar - global top navigation element
+
+ * Bootstrap UI - http://getbootstrap.com/components/#navbar
+ --------------------------------------------------
+*/
 
 .navbar-wrapper {
-  .mediatop &{
-    position: absolute;
-  }
   top: 0;
   right: 0;
   left: 0;
   z-index: 20;
+
+  .mediatop &{
+    position: absolute;
+  }
   .container {
     padding-right: 0;
     padding-left: 0;
@@ -84,11 +86,13 @@ hr.divider{
   .navbar {
     padding-right: 15px;
     padding-left: 15px;
+
     .container {
       width: auto;
     }
     .btn-group{
       display:block;
+
       &:after, &:before{
         content:" ";
         display:table;
@@ -102,96 +106,26 @@ hr.divider{
           background-color:transparent;
         }
       }
-      
       button.dropdown-toggle{
         background-color:transparent;
         border-left: #101010 solid 1px;
         box-shadow: -1px 0 0 rgba(#fff, 0.1);
+
         .caret{
           color: $gray-light;
         }
       }
       a.btn {
         color: $gray-light;
+
         &:hover{
           color:#fff;
         }
       }
     }
   }
-}
 
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-  height: 500px;
-  margin-bottom: 60px;
-  .mediatop & .item{
-    -webkit-background-size:cover;
-    background-size:cover;
-    background-position: center center;
-  }
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 500px;
-  background-color: #777;
-}
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
-}
-
-/* HOMEPAGE PROMOTE CONTENT
--------------------------------------------------- */
-
-.promote {
-  > .row > div {
-    margin-bottom: 20px;
-    text-align: center;
-    p {
-      margin-right: 10px;
-      margin-left: 10px;
-    }
-  }
-  h2 {
-    font-weight: normal;
-  }
-}
-
-/* EVENT PAGE
--------------------------------------------------- */
-.mod.location{
-  > iframe{
-    border:none;
-    width:100%;
-    height:300px;
-  }
-}
-
-/* FOOTER
--------------------------------------------------- */
-.social-block{
-  > h3{
-    padding-right:18px;
-  }
-}
-
-
-/* RESPONSIVE CSS
--------------------------------------------------- */
-@media (max-width: 767px) {
-  .navbar-wrapper{
+  @media (max-width: 767px) {
     .navbar{
       .btn-group{
         > .btn + .dropdown-toggle {
@@ -203,6 +137,7 @@ hr.divider{
           margin-top:40px;
           padding:0;
           border-radius:0;
+
           li:first-child{
             border-top: solid 1px #101010;
             box-shadow: inset 0 1px 0 rgba(#fff, 0.1);
@@ -215,13 +150,10 @@ hr.divider{
       }
     }
   }
-}
 
-@media (min-width: 768px) {
-
-  /* Navbar positioning foo */
-  .navbar-wrapper {
+  @media (min-width: 768px) {
     margin-top: 20px;
+
     .container {
       padding-right: 15px;
       padding-left: 15px;
@@ -230,6 +162,7 @@ hr.divider{
       padding-right: 0;
       padding-left: 0;
       border-radius: 4px;
+
       .btn-group{
         button.dropdown-toggle{
           border-right: #101010 solid 1px;
@@ -238,32 +171,252 @@ hr.divider{
       }
     }
   }
+}
 
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
+/*
+ --------------------------------------------------
+ Carousel - on /index directly below Navbar
+
+ * Bootstrap UI - http://getbootstrap.com/javascript/#carousel
+ --------------------------------------------------
+*/
+
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+  .mediatop & .item{
+    -webkit-background-size:cover;
+    background-size:cover;
+    background-position: center center;
   }
-  .event-list > div:nth-of-type(2n+3),.member-list > div:nth-of-type(2n+3){
-    clear:left;
+  .item {
+    height: 500px;
+    background-color: #777;
+  }
+  .carousel-caption {
+    z-index: 10;
+  }
+  .carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
   }
 }
 
-@media (min-width: 992px) {
-  .event-list > div:nth-of-type(2n+3),.member-list > div:nth-of-type(2n+3){
-    clear:none;
+/*
+ --------------------------------------------------
+ Promote Block - 
+ --------------------------------------------------
+*/
+
+.promote-block {
+  margin: ($line-height-computed * 3) 0;
+  text-align: center;
+
+  &-img{
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 5px 18px rgba( black,.5);
   }
-  .event-list > div:nth-of-type(3n+4),.member-list > div:nth-of-type(3n+5){
-    clear:left;
+  &-hd{
+    font-weight: normal;
+    border-bottom: dashed 1px;
+    padding-bottom:$line-height-computed;
   }
-  
-  .mod.location{
-    > iframe{
-      border:none;
-      width:100%;
-      height:400px;
+  &-bd{
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  @media (min-width: 992px) {
+    &-img{
+      width: 160px;
+      height: 160px;
     }
   }
+}
+
+/*
+ --------------------------------------------------
+ Social Block - social media icons web font
+ --------------------------------------------------
+*/
+
+.social-block{
+  &-hd{
+    padding-right:18px;
+    float:left;
+  }
+  &-bd{
+    list-style:none;
+    font-family: 'Mono Social Icons Font';
+    font-size:$font-size-h1;
+    height:50px;
+    line-height:50px;
+
+    li{
+      display:inline-block;
+      line-height:inherit;
+      height:inherit;
+    }
+    a{
+      text-decoration:none;
+      text-shadow:none;
+      transition: color 600ms;
+      background-color: rgba(white, .5);
+      display:inline-block;
+      line-height:inherit;
+      height:inherit;
+      width:50px;
+      border-radius:100px;
+      text-align:center;
+      color: $gray-dark;
+
+      $facebook: #428bca;
+      $meetup: #e0393e;
+      $googleplus: #dd4b39;
+      $twitter: #55acee;
+      $github: #4183c4;
+
+      &.facebook:hover{
+        color: $facebook;
+      }
+      &.meetup:hover{
+        color: $meetup;
+      }
+      &.googleplus:hover{
+        color: $googleplus;
+      }
+      &.twitter:hover{
+        color: $twitter;
+      }
+      &.github:hover{
+        color: $github;
+      }
+    }
+  }
+}
+
+/*
+ --------------------------------------------------
+ Event Blocks - event list, single event
+ --------------------------------------------------
+*/
+
+.list-item-block{
+  background-color:white;
+  margin-bottom: $line-height-computed;
+  border-radius:$border-radius-base;
+  color:$gray-dark;
+  text-shadow:none;
+  text-align:center;
+  box-shadow: 0 2px 9px rgba(black, .5);
   
+  > a{
+    display:block;
+    padding:10px;
+  }
+  &-img{
+    max-width:100%;
+    min-width:75%;
+  }
+  &-hd{
+    padding:10px;
+  }
+  &-bd{
+    padding:10px;
+    padding-bottom:$line-height-computed;
+  }
+}
+
+/*
+ --------------------------------------------------
+ List Wrapper - events, members
+ --------------------------------------------------
+*/
+
+.list-wrapper{
+  @media (min-width: 768px) {
+    .list-item:nth-of-type(2n+3){
+      clear:left;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .list-item:nth-of-type(2n+3){
+      clear:none;
+    }
+    .list-item.col-md-4:nth-of-type(3n+4),
+    .list-item.col-md-3:nth-of-type(3n+5){
+      clear:left;
+    }
+  }
+}
+
+
+/*
+ --------------------------------------------------
+ Location Block
+
+ * Display Google Map
+ --------------------------------------------------
+*/
+
+.location-block{
+  &-map{
+    border:none;
+    width:100%;
+    height:300px;
+  }
+}
+
+/*
+ --------------------------------------------------
+ Styles
+
+ * apply to add some styles to blocks
+ --------------------------------------------------
+*/
+.btn{
+  text-shadow:none;
+}
+
+.well{
+  color:$gray-dark;
+}
+
+#disqus_thread{
+  padding:2px 12px;
+  background: rgba(white, .8);
+}
+
+.style-shadow-box{
+  background: rgba(white, .5);
+  border-radius:$border-radius-base;
+  box-shadow: 0 2px 9px rgba(black, .5);
+  color:$gray-dark;
+}
+
+.style-shadow-drop{
+  $startColor: rgba(0,0,0,0.8);
+  $endColor: rgba(0,0,0,0);
+  $start: 0%;
+  $end: 70%;
+
+  &:after{
+    content:'';
+    display:block;
+    height:30px;
+    background: -moz-radial-gradient(center, ellipse cover, $startColor $start, $endColor $end); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop($start,$startColor), color-stop($end,$endColor)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, $startColor $start,$endColor $end); /* Chrome10+,Safari5.1+ */
+    background: -ms-radial-gradient(center, ellipse cover, $startColor $start,$endColor $end); /* IE10+ */
+    background: radial-gradient(ellipse at center, $startColor $start,$endColor $end); /* W3C */
+    background-repeat:no-repeat;
+    background-size:100% 80%;
+    background-position:0 -11px;
+
+  }
 }
