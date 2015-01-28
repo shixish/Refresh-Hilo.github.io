@@ -19,6 +19,22 @@
 			$(this)[0].action = submitURL;
 			
 		});
+
+		// Events page new event flag
+		if(location.pathname === '/events/'){
+			var currentDate = new Date();
+			$('.list-item', '#events').each(function(index, element){
+				var $t = $(this),
+					year = parseInt($t.attr('data-year')),
+					month = parseInt($t.attr('data-month'))-1,
+					day = parseInt($t.attr('data-day')),
+					eventDate = new Date(year, month, day);
+
+				if(currentDate < eventDate){
+					$t.addClass('future-event');
+				}
+			})
+		}
 	});
 
 </script>
