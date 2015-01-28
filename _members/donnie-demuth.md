@@ -1,7 +1,7 @@
 ---
 layout: member
 title: 'Donnie Demuth' #Name
-photo: /assets/img/DonnieProfile.jpg #File Path
+photo: /assets/img/member-DonnieProfile.jpg #File Path
 
 ---
 

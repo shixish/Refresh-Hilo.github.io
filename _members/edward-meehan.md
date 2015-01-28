@@ -1,7 +1,7 @@
 ---
 layout: member
 title: 'Edward Meehan' #Name
-photo: /assets/img/EdwardMeehan54.jpg #File Path
+photo: /assets/img/member-EdwardMeehan54.jpg #File Path
 
 ---
 
