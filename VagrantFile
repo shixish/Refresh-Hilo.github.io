@@ -1,3 +1,5 @@
+# https://github.com/thruflo/vagrant-jekyll
+
 Vagrant::Config.run do |config|
 
   config.vm.box = "precise32"
