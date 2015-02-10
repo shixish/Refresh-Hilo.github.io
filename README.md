@@ -44,3 +44,35 @@ This document is a work in progress - please help keep it updated
 * [jQuery](http://jquery.com/)
 * [Modernizr](http://modernizr.com/)
 * [Mono Social Icons Font](http://drinchev.github.io/monosocialiconsfont/)
+
+##Vagrant
+
+Use the included VagrantFile to develop without installing and configuring jekyll on your local machine.
+
+[Vagrant is available](https://www.vagrantup.com) for Mac OS X, Windows, and Linux.
+
+
+```
+cd Refresh-Hilo.github.io
+vagrant up
+```
+
+Finally, you can ssh into the vm and do all your Jekyll-related work in there:
+
+```
+vagrant ssh
+
+cd /vagrant
+
+jekyll server --watch -P 8124
+```
+
+###View your modifications
+
+Vagrant is configured to forward port 8124.
+
+Open the following url in your web browser:
+
+```
+http://localhost:8124
+```
