@@ -2,20 +2,18 @@
 layout: page
 title: Events
 ---
-<div class="row event-list">
+<div id="events" class="row list-wrapper">
 	{% for event in site.events reversed %}
-		<div class="col-sm-6 col-md-4" data-time="{{ event.date | date_to_long_string }}">
-			<div class="thumbnail">
-				<a href="{{ event.url }}"><img src="{{ event.photo }}" alt=""/></a>
-				<div class="caption">
-					<h3>{{ event.title }}</h3>
+		<div class="col-sm-6 col-md-4 list-item" data-year="{{ event.date | date: "%Y" }}" data-month="{{ event.date | date: "%m" }}" data-day="{{ event.date | date: "%d" }}">
+			<div class="list-item-block">
+				<a href="{{ event.url }}"><img class="list-item-block-img" src="{{ event.photo }}" alt=""/></a>
+				<h3 class="list-item-block-hd">{{ event.title }}</h3>
+				<div class="list-item-block-bd">
 					<p>
-						<span class="h5">{{ event.date | date: "%B %-d, %Y" }}</span><br/>
+						<h5>{{ event.date | date: "%B %-d, %Y" }}</h5>
 						<span>{{ event.date | date: "%A %l:%M %p %Z" }}</span>
 					</p>
-					<p>
-						<a href="{{ event.url }}" class="btn btn-default">View Event Details</a>
-					</p>
+					<a href="{{ event.url }}" class="btn btn-default">View Event Details</a>
 				</div>
 			</div>
 		</div>

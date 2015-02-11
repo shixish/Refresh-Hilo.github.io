@@ -1,11 +1,17 @@
-- headline: 'Previous Meetup'
-  url: /event/12-09-2014-meetup/
-  cta: 'View Video &amp; Links'
-  content: 'Comps into Pages - Dec 09, 2014'
+- headline: 'Feb 10, 2015 - Vagrant &amp; CSS Animations/Transitions'
+  url: /event/11-11-2014-meetup/
+  cta: 'RSVP Today!'
+  content: 'The next event is coming soon, join us!'
   img: /assets/img/texture-loops.jpg
 
-- headline: 'Previous Meetup'
+- headline: 'Refresh Replay - Sketch'
+  url: /event/2015-01-13-meetup/
+  cta: 'View Video &amp; Links'
+  content: 'Meetup on Jan 13, presented by Jason Kalawa'
+  img: http://photos3.meetupstatic.com/photos/event/3/1/a/7/600_433332711.jpeg
+
+- headline: 'Refresh Replay - AngularJS'
   url: /event/11-11-2014-meetup/
   cta: 'View Video &amp; Links'
-  content: 'AngularJS - Nov 11, 2014'
-  img: /assets/img/texture-wood.jpg
+  content: 'Meetup on Nov 11, presented by Mike Stokesbary'
+  img: http://photos3.meetupstatic.com/photos/event/8/5/1/8/highres_382294072.jpeg

@@ -1,7 +1,7 @@
 ---
 layout: member
 title: 'Michael Stokesbary' #Name
-photo: /assets/img/Mike_322X227-150x150.jpg #File Path
+photo: /assets/img/member-Mike_322X227-150x150.jpg #File Path
 
 ---
 

@@ -3,7 +3,7 @@ layout: default
 bodyClass: mediatop
 ---
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div id="myCarousel" class="carousel slide style-shadow-drop" data-ride="carousel">
 	{% comment %} The default-carousel.yml file can be found in the _data directory {% endcomment %}
 	<ol class="carousel-indicators">
 		{% for item in site.data.default-carousel %}
@@ -35,40 +35,42 @@ bodyClass: mediatop
 	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
 	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 </div>
-<div class="container promote">
+<!-- end .carousel -->
+<div class="container style-shadow-box">
 	<div class="row">
-		<div class="col-sm-4">
-			<img src="/assets/img/Roundicons-54.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-			<h2>Refresh</h2>
-			<p>
-				{{ site.description }}
-			</p>
-			<p>
+		<div class="col-md-4 promote-block">
+			<img class="promote-block-img img-circle" src="/assets/img/Roundicons-54.png" alt="Generic placeholder image">
+			<h2 class="promote-block-hd">Refresh</h2>
+			<div class="promote-block-bd">
+				<p>
+					{{ site.description }}
+				</p>
 				<a class="btn btn-default" href="{{ "/about" | prepend: site.baseurl }}" role="button">Learn More »</a>
-			</p>
+			</div>
 		</div>
-		<div class="col-sm-4">
-			<img src="/assets/img/Roundicons-41.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-			<h2>Events</h2>
-			<p>
-				We meet the second Tuesday of each month. The group discusses a variety of topics around the web sphere. Each monthly event we try to have at least two topics, focused in design and development.
-			</p>
-			<p>
+		<div class="col-md-4 promote-block">
+			<img class="promote-block-img img-circle" src="/assets/img/Roundicons-41.png" alt="Generic placeholder image">
+			<h2 class="promote-block-hd">Events</h2>
+			<div class="promote-block-bd">
+				<p>
+					We meet the second Tuesday of each month. The group discusses a variety of topics around the web sphere. Each monthly event we try to have at least two topics, focused in design and development.
+				</p>
 				<a class="btn btn-default" href="{{ "/events" | prepend: site.baseurl }}" role="button">View events »</a>
-			</p>
+			</div>
 		</div>
-		<div class="col-sm-4">
-			<img src="/assets/img/Roundicons-01.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-			<h2>Members</h2>
-			<p>
-				Membership is open to all who want to learn or contribute. Many of our members are active online professionals, designers, developers, and entrepreneurs.
-			</p>
-			<p>
+		<div class="col-md-4 promote-block">
+			<img class="promote-block-img img-circle" src="/assets/img/Roundicons-01.png" alt="Generic placeholder image">
+			<h2 class="promote-block-hd">Members</h2>
+			<div class="promote-block-bd">
+				<p>
+					Membership is open to all who want to learn or contribute. Many of our members are active online professionals, designers, developers, and entrepreneurs.
+				</p>
 				<a class="btn btn-default" href="{{ "/members" | prepend: site.baseurl }}" role="button">View members »</a>
-			</p>
+			</div>
 		</div>
 	</div>
 </div>
+<!-- end .promote -->
 
 <!-- <div class="home">
 
