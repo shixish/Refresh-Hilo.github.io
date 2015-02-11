@@ -64,7 +64,7 @@ vagrant ssh
 
 cd /vagrant
 
-jekyll server --watch -P 8124
+jekyll server --force_polling  -P 8124
 ```
 
 ###View your modifications
