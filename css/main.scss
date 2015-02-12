@@ -401,9 +401,18 @@ a{
   color:$gray-dark;
 }
 
+.row > .meetup{
+  background-color: rgba(black,.3);
+  padding-bottom:15px;
+}
+
 #disqus_thread{
   padding:2px 12px;
   background: rgba(white, .8);
+}
+
+.embed-responsive-16by9{
+  margin-bottom:1em;
 }
 
 .style-shadow-box{
