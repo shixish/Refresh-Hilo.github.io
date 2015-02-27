@@ -21,3 +21,11 @@
   state: Hawaii
   zip: 96720
   url: http://hiloburgerjoint.com
+
+- id: HTT
+  title: Hilo Town Tavern
+  address: '168 Keawe St'
+  city: Hilo
+  state: Hawaii
+  zip: 96720
+  url: http://hilotavern.com
