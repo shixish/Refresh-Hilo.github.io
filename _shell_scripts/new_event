@@ -10,7 +10,7 @@ FILE=$DATE-$TYPE
 
 
 if [ -z $1 ] && [ -z $2 ]; then
-        echo "Oops, need a date and title. The format is: $ new_event YYYY-MM-DD 'Title of the event'"
+        echo "options: new_event Date:YYYY-MM-DD Type Title LocationID MeetupID HangoutURL"
 else
         touch /vagrant/_events/$FILE.md
         printf '%s\n' "---" >> /vagrant/_events/$FILE.md
@@ -19,7 +19,7 @@ else
         printf "date: $DATE 18:00:00 -10:00 #event time is 24hour format and offset by timezone %b\n" >> /vagrant/_events/$FILE.md
         printf "tags: $TYPE %b\n" >> /vagrant/_events/$FILE.md
         printf "%b\n" >> /vagrant/_events/$FILE.md
-        printf "photo: /assets/img/event-placeholder.jpg %b\n" >> /vagrant/_events/$FILE.md
+        printf "photo: /assets/img/event-roundtable.jpg %b\n" >> /vagrant/_events/$FILE.md
         printf "location: $LOCATION %b\n" >> /vagrant/_events/$FILE.md
         printf "meetupid: $MEETUPID %b\n" >> /vagrant/_events/$FILE.md
         printf "hangoutonair: '$HANGOUT' %b\n" >> /vagrant/_events/$FILE.md

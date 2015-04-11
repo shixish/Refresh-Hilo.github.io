@@ -6,7 +6,7 @@ FILE=$(echo "$FNAME-$LNAME" | tr '[:upper:]' '[:lower:]')
 
 
 if [ -z $1 ] && [ -z $2 ]; then
-        echo "Oops, need a name. The format is: $ new_member Firstname Lastname."
+        echo "options: new_member Firstname Lastname"
 else
         touch /vagrant/_members/$FILE.md
         printf '%s\n' "---" >> /vagrant/_members/$FILE.md
