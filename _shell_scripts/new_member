@@ -1,0 +1,27 @@
+#!/bin/bash
+
+FNAME=$(echo "$1" | tr -dc '[:alnum:]\n\r')
+LNAME=$(echo "$2" | tr -dc '[:alnum:]\n\r')
+FILE=$(echo "$FNAME-$LNAME" | tr '[:upper:]' '[:lower:]')
+
+
+if [ -z $1 ] && [ -z $2 ]; then
+        echo "Oops, need a name. The format is: $ new_member Firstname Lastname."
+else
+        touch /vagrant/_members/$FILE.md
+        printf '%s\n' "---" >> /vagrant/_members/$FILE.md
+        printf "layout: member %b\n" >> /vagrant/_members/$FILE.md
+        printf "title: '$FNAME $LNAME' %b\n" >> /vagrant/_members/$FILE.md
+        printf "photo: /assets/img/member-placeholder.jpg %b\n" >> /vagrant/_members/$FILE.md
+        printf "#photo: /assets/img/member-$FILE.jpg #put a face to that name %b\n" >> /vagrant/_members/$FILE.md
+        printf '%s\n' "---" >> /vagrant/_members/$FILE.md
+        printf "%b\n" >> /vagrant/_members/$FILE.md
+        printf "Add your content here, who is $FNAME $LNAME? %b\n" >> /vagrant/_members/$FILE.md
+        printf "%b\n" >> /vagrant/_members/$FILE.md
+        printf "####Links %b\n" >> /vagrant/_members/$FILE.md
+        printf "%b\n" >> /vagrant/_members/$FILE.md
+        printf "* [Link Label](http:linkurl.com) %b\n" >> /vagrant/_members/$FILE.md
+        printf "* [Link Label](http:linkurl.com) %b\n" >> /vagrant/_members/$FILE.md
+
+        echo "Created a new document for $FNAME $LNAME!"
+fi

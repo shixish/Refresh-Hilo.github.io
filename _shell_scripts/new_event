@@ -1,0 +1,44 @@
+#!/bin/bash
+
+DATE=$(echo "$1" | tr -dc '[:digit:]-')
+TYPE=$([ -z $2 ] && echo meetup || echo $2 )
+TITLE=$([ -z "$3" ] && echo Event TBD || echo $3 )
+LOCATION=$([ -z $4 ] && echo HTE || echo $4 | tr '[:lower:]' '[:upper:]')
+MEETUPID=$([ -z $5 ] && echo XXXXXX || echo $5 | tr -dc '[:digit:]')
+HANGOUT=$([ -z $6 ] && echo https://plus.google.com/u/0/events/EVENTID || echo $6 )
+FILE=$DATE-$TYPE
+
+
+if [ -z $1 ] && [ -z $2 ]; then
+        echo "Oops, need a date and title. The format is: $ new_event YYYY-MM-DD 'Title of the event'"
+else
+        touch /vagrant/_events/$FILE.md
+        printf '%s\n' "---" >> /vagrant/_events/$FILE.md
+        printf "layout: event %b\n" >> /vagrant/_events/$FILE.md
+        printf "title: '$TITLE' %b\n" >> /vagrant/_events/$FILE.md
+        printf "date: $DATE 18:00:00 -10:00 #event time is 24hour format and offset by timezone %b\n" >> /vagrant/_events/$FILE.md
+        printf "tags: $TYPE %b\n" >> /vagrant/_events/$FILE.md
+        printf "%b\n" >> /vagrant/_events/$FILE.md
+        printf "photo: /assets/img/event-placeholder.jpg %b\n" >> /vagrant/_events/$FILE.md
+        printf "location: $LOCATION %b\n" >> /vagrant/_events/$FILE.md
+        printf "meetupid: $MEETUPID %b\n" >> /vagrant/_events/$FILE.md
+        printf "hangoutonair: '$HANGOUT' %b\n" >> /vagrant/_events/$FILE.md
+        printf '%s\n' "---" >> /vagrant/_events/$FILE.md
+        printf "%b\n" >> /vagrant/_events/$FILE.md
+        printf "Add event content here. %b\n" >> /vagrant/_events/$FILE.md
+        printf "%b\n" >> /vagrant/_events/$FILE.md
+        printf '%s\n' "<!-- REMOVE COMMENT TAGS AFTER EVENT" >> /vagrant/_events/$FILE.md
+        printf "####Event Follow up %b\n" >> /vagrant/_events/$FILE.md
+        printf "%b\n" >> /vagrant/_events/$FILE.md
+        printf "Presentation Links %b\n" >> /vagrant/_events/$FILE.md
+        printf "* [Link Label](http:linkurl.com) %b\n" >> /vagrant/_events/$FILE.md
+        printf "* [Link Label](http:linkurl.com) %b\n" >> /vagrant/_events/$FILE.md
+        printf "%b\n" >> /vagrant/_events/$FILE.md
+        printf "####Event Video %b\n" >> /vagrant/_events/$FILE.md
+        printf '%s\n' '<div class="embed-responsive embed-responsive-16by9">' >> /vagrant/_events/$FILE.md
+        printf '%s\n' '<iframe class="embed-responsive-item" src="//www.youtube.com/embed/YOUTUBEID" frameborder="0" allowfullscreen></iframe>' >> /vagrant/_events/$FILE.md
+        printf '%s\n' '</div>' >> /vagrant/_events/$FILE.md
+        printf '%s\n' "REMOVE COMMENT TAGS AFTER EVENT -->" >> /vagrant/_events/$FILE.md
+
+        echo "Created a new document for $TITLE!"
+fi

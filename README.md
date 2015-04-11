@@ -21,6 +21,35 @@ Since we are using GIT, this part is easy. You may freely work in the *develop* 
 ##Going Live
 Since we are using a submodule to point to a subfolder of the develop branch, deployment is actually easier than it sounds. All you need to do to deploy your changes is to commit any changes to the *develop* branch or merge your changes and run the [jekyll -build command](http://jekyllrb.com/docs/usage/) from the local project. After jekyll has compiled the new files into the _site directory you can then commit the changes in the submodule (master branch) and push them to GitHub.
 
+##Creating new members and events documents
+We have some shell scripts to use with your Vagrant VM, now creating a new document for members or events is just a single command away. This will create the file in the proper location and also add some starter text to get you going quicker. No more copy and paste of a template.
+###How to use shell scripts
+After you have launched the Vagrant VM, ssh into the VM:
+
+```
+vagrant ssh
+```
+####Create new event document
+```
+new_event $date $type "$title" $location $meetupid $hangouturl
+```
+Replace the $arguments with the values for the event, the only required value is the date. The date must be formatted properly to work with Jekyll. Date format: YYYY-MM-DD ex: 2015-02-23. Also the $title must be in quotes if it has spaces. ex: "Meetup event title"
+```
+new_event 2015-02-21 meetup "New meetup event" HTE 122358 'http://hangouturl.com'
+```
+The file should be in the project - projectloction/_events/2015-02-21-meetup.md
+
+####Create new member document
+```
+new_member $fname $lname
+```
+Replace $fname and $lname with your first name and last name: ex:
+
+```
+new_member Edward Meehan
+```
+The file should be in the project - projectlocation/_members/edward-meehan.md
+
 ##Liquid Template Notes
 
 ###Variables

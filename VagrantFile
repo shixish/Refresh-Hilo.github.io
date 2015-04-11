@@ -8,5 +8,12 @@ Vagrant::Config.run do |config|
   config.vm.provision :shell,
    :inline => "sudo apt-get update && sudo apt-get -y install python-software-properties && sudo apt-add-repository ppa:brightbox/ruby-ng && sudo apt-get update && sudo apt-get -y install build-essential git ruby2.2 ruby2.2-dev && sudo gem install github-pages therubyracer --no-ri --no-rdoc"
 
+# Provision Vagrant user shell scripts
+  config.vm.provision :shell, :inline => "rm -rf ~/.bash_script &&
+  	mkdir ~/.bash_script &&
+  	cp /vagrant/_shell_scripts/* ~/.bash_script/ &&
+  	chmod u+rwx ~/.bash_script/* -R &&
+  	printf 'export PATH=$PATH:~/.bash_script %b\n' >> ~/.bashrc", privileged: false, run: "always"
+
   config.ssh.forward_agent = true
 end 
